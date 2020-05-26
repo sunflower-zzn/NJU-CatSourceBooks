@@ -1,0 +1,109 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+/**/
+
+.scrollPage {
+  /*vh：相对于视口的高度。视口被均分为100单位的vh*/
+  height: 100vh;
+}
+
+.nav-list {
+  display: flex;  /*使用弹性布局 flex*/
+  flex-wrap: wrap;  /*布局自动换行，不调整div宽度，比如：一个div宽度100%，设置此属性，第二个div就在第二行了*/
+  padding: 0px 40rpx 0px;  /*padding设置上右下左边距；rpx单位是微信小程序中css的尺寸单位，rpx可以根据屏幕宽度进行自适应。*/
+  justify-content: space-between; /*设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。*/
+}
+
+.nav-li {
+  padding: 30rpx;  /*设置内边距*/
+  border-radius: 12rpx;  /*设置边框圆角弧度*/
+  width: 45%;  /*设置宽度百分比（相对于父类块来说）*/
+  margin: 0 2.5% 40rpx;  /*设置外边距*/
+  background-image: url(https://image.weilanwl.com/color2.0/cardBg.png);
+  background-size: cover;  /*背景图覆盖区域填充*/
+  background-position: center;  /*背景图位置*/
+  position: relative;  /*相对位置*/
+  z-index: 1;  /*设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。*/
+}
+
+.nav-li::after {  /*列表尾元素，用于创造阴影效果*/
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -10%;
+  border-radius: 10rpx;
+  opacity: 0.2;
+  transform: scale(0.9, 0.9);
+}
+
+.nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+}
+
+.nav-title {  /*标题*/
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+.nav-title::first-letter {  /*标题首字放大*/
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+.nav-name {  /*列表名称*/
+  font-size: 28rpx;
+  text-transform: Capitalize;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.nav-name::before {  /*名称首元素*/
+  content: "";  /*默认值，同样为了视觉效果*/
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;  /*不透明度设置*/
+}
+
+.nav-name::after {  /*同上*/
+  content: "";  
+  position: absolute;
+  display: block;
+  width: 100rpx;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  right: 40rpx;
+  opacity: 0.3;
+}
+
+.nav-name::first-letter {  /*首字大写*/
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 1px;
+}
+
+.nav-li text { 
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.text-light {
+  font-weight: 300;
+}

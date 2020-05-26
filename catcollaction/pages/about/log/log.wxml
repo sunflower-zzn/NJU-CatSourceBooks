@@ -1,0 +1,31 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">日志</view></cu-custom>
+<view class="cu-timeline">
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">第一次会议</view>
+        <view class="cu-tag line-white">5/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>配置开发者工具</view>
+        <view>项目初始化</view>
+        <view>学习版本控制</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">第二次会议</view>
+        <view class="cu-tag line-white">5/22</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、页面设计讨论</view>
+        <view>2、前端介绍——colorUI</view>
+        <view>3、后端——云函数介绍</view>
+        <view>4、需求拓展、头脑风暴</view>
+        <view>5、接口设计</view>
+      </view>
+    </view>
+  </view>
+</view>

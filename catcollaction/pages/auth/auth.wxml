@@ -1,0 +1,9 @@
+<view class='UCenter-bg'>
+  <image src='/images/logo.png' class='png' mode='widthFix'></image>
+  <view class='text-xl'>南大猫咪图鉴
+    <text class='text-df'>v1.0</text>
+  </view>
+</view>
+<view class='padding-xl'>
+  <button class='cu-btn  bg-green shadow lg block' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">微信登录</button>
+</view>

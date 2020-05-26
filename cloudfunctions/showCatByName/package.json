@@ -1,0 +1,14 @@
+{
+  "name": "showCatByName",
+  "version": "1.0.0",
+  "description": "通过名字字段筛选数据，传入值说明：name为猫咪名字，传出值说明同showCatById",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "王晓奇",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~2.0.3"
+  }
+}

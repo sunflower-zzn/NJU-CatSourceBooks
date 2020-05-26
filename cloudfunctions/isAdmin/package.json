@@ -1,0 +1,14 @@
+{
+  "name": "isAdmin",
+  "version": "1.0.0",
+  "description": "判断一个用户是否为管理员，传入参数：无",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "王晓奇",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "~2.0.3"
+  }
+}
