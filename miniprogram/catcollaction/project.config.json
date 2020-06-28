@@ -1,0 +1,31 @@
+{
+	"description": "项目配置文件",
+	"packOptions": { 
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wx6d6c323fe54d42ee",
+	"projectname": "ColorUI2.0-demo",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"tabBar": {
+			"list": [{
+			  "pagePath": "pages/index/index",
+			  "text": "首页"
+			}]
+		  }
+	}
+}

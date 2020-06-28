@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-purple text-bold'>关于南大猫咪图鉴</view>
+  <view class='text-content'>
+    <view>小蓝鲸你好！欢迎来到南大猫咪图鉴！</view>
+    <view class='margin-top-sm'>本项目为软件学院2018级的五位同学(yyb、zzn、wxq、qzx、zt)开发的小程序，希望能够为NJU的猫主子们登记造册！</view>
+    <view class='margin-top-sm'><text class="text-bold">灵感参考</text>：PKU猫咪图鉴</view>
+    <view class='margin-top-sm'><text class="text-bold">UI参考</text>：colorUI2.0，作者文晓港</view>
+    <view class='margin-top-sm'><text class="text-bold">icon参考</text>：www.icons8.com</view>
+    <view class='margin-top-sm'>本项目已开源至github，如果喜欢这个项目的话欢迎去github上为我们点个star！同时也可以提issue给我们！</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

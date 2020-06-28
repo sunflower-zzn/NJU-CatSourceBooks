@@ -1,0 +1,46 @@
+<!--图片轮播-->
+<swiper class="screen-swiper round-dot" indicator-dots="true" indicator-color="grey" circular="true" autoplay="true" interval="2500" duration="500" style="height:450rpx">
+  <swiper-item wx:for="{{imglist}}" wx:key>
+    <image src="{{item.url}}" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+
+<view class="VerticalBox">
+<!--左侧滑动页面-->
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.kind}}
+    </view>
+  </scroll-view>
+
+<!--右侧滑动页面-->
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view  class='cu-bar solid-bottom bg-white'>
+        <view class='action'>
+          <text class='cuIcon-title text-green'></text> {{item.kind}} </view>
+      </view>
+<view wx:for="{{listArr}}" wx:for-index="lindex" wx:for-item="litem">
+
+<navigator open-type="navigate" hover-clpngass='none' url="/pages/catdetail/home/home?id={{litem.id}}">
+<view wx:if="{{litem.kind==item.kind}}">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{litem.icon}});"></view>
+          <view class="content">
+            <view class="text-grey">
+            <text>{{litem.name}}</text>
+            </view>
+            <view class="text-gray text-sm flex">
+              <text class="text-cut">{{litem.nickName}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+ </navigator>
+
+</view>
+    </view>
+  </scroll-view>
+</view>
