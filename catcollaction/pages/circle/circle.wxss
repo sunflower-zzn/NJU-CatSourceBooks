@@ -1,0 +1,39 @@
+
+.add_btn{
+  margin-left: 10px;
+  
+  position: fixed;
+  bottom: 120rpx;
+  text-align: center;
+}
+.btn{
+
+margin-top: 30rpx;
+width: 50px;
+height:50px;
+background: rgb(17, 187, 17);
+color: #fff;
+border: 0 solid #ffffff;
+border-radius: 500px;
+box-shadow: 4px 1px 1px #cccccc;
+font-size: 20px;
+}
+
+/*图片展示*/
+.photo-view{
+background: white;
+margin-left: 30rpx;
+margin-bottom: 20rpx;
+display: flex;
+align-items: left;
+
+flex-wrap: wrap;
+border-top: 1rpx solid #D9D9D9;
+}
+.photo{
+width: 33.33333333%;
+
+background:white;  
+margin-right: 10rpx;
+margin-top: 20rpx;
+}

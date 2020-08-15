@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cathome":"/pages/cathome/cathome",
+    "circle": "/pages/circle/circle",
+    "catkind": "/pages/catkind/home",
+    "about": "/pages/about/home/home"
+  }
+}

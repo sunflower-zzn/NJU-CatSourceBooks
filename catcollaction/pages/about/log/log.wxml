@@ -1,0 +1,117 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">日志</view></cu-custom>
+<view class="cu-timeline">
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第八次会议</view>
+        <view class="cu-tag line-white">6/28</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、录制视频</view>
+        <view>2、小程序上线！</view>
+        <view>感谢小组成员的辛苦付出！</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第七次会议</view>
+        <view class="cu-tag line-white">6/25</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、朋友圈页面优化</view>
+        <view>2、后端接口文档编写</view>
+        <view>3、整体文档编写</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第六次会议</view>
+        <view class="cu-tag line-white">6/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、cat数据库，年龄age改为string</view>
+        <view>2、猫咪图片放大及保存</view>
+        <view>3、上传猫咪信息界面及其绑定</view>
+        <view>4、第二界面美化+前后端联调</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第五次会议</view>
+        <view class="cu-tag line-white">6/12</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、第二页面前后端设计</view>
+        <view>2、猫咪资料扩充+朋友圈资料扩充</view>
+        <view>3、关于界面的管理员接口</view>
+        <view>4、关于页面的浏览点赞功能</view>
+        <view>5、icon统一</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第四次会议</view>
+        <view class="cu-tag line-white">6/05</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、后端基本完成，服务器备案及微信后台功能开通</view>
+        <view>2、前端分享，进一步规划</view>
+        <view>3、测试数据格式，导入服务器并测试请求</view>
+        <view>4、页面进一步完善，注意人机交互</view>
+        <view>5、争取下周可以初步上线</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第三次会议</view>
+        <view class="cu-tag line-white">5/29</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、放弃云开发，转为购买服务器作为后端</view>
+        <view>2、前端页面确定并分工</view>
+        <view>3、后端接口函数设计及文档编写</view>
+        <view>4、资料收集，json格式及前后端交互设计</view>
+        <view>5、确定基本功能与后期拓展功能</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第二次会议</view>
+        <view class="cu-tag line-white">5/22</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、页面设计讨论</view>
+        <view>2、前端介绍——colorUI</view>
+        <view>3、后端——云函数介绍</view>
+        <view>4、需求拓展、头脑风暴</view>
+        <view>5、接口设计</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green text-bold">第一次会议</view>
+        <view class="cu-tag line-white">5/18</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1、配置开发者工具</view>
+        <view>2、项目初始化</view>
+        <view>3、学习微信版本控制</view>
+      </view>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,27 @@
+<cathome wx:if="{{PageCur==='cathome'}}"></cathome>
+<circle wx:if="{{PageCur==='circle'}}"></circle>
+<catkind wx:if="{{PageCur==='catkind'}}"></catkind>
+<about wx:if="{{PageCur==='about'}}"></about>
+
+<view class="cu-bar tabbar bg-white shadow foot">
+  <view class="action" bindtap="NavChange" data-cur="cathome">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/cat{{PageCur=='cathome'?'_cur':''}}.png"></image>
+    </view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="circle">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/circle{{PageCur=='circle'?'_cur':''}}.png"></image>
+    </view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="catkind">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/kind{{PageCur=='catkind'?'_cur':''}}.png"></image>
+    </view>
+  </view>
+  <view class="action" bindtap="NavChange" data-cur="about">
+    <view class='cuIcon-cu-image'>
+      <image src="/images/tabbar/about{{PageCur=='about'?'_cur':''}}.png"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">猫咪管理</view>
+</cu-custom>
+
+<view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 管理员入口
+    </view>
+	</view>
+	<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+		 <view class="cu-item {{menuArrow?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../catDetailUpload/catDetailUpload" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">猫咪信息录入</text>
+      </navigator>
+    </view>
+	</view>

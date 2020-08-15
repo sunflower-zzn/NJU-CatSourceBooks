@@ -1,0 +1,125 @@
+<!--catcollaction/pages/catdetail/catdetail.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">
+        返回
+    </view>
+    <view slot="content" wx:for="{{catDetail}}" wx:key >
+        {{item.name}}
+    </view>
+</cu-custom>
+
+<swiper class="screen-swiper round-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" wx:for="{{catDetail}}" wx:key>
+  <swiper-item wx:for="{{item.url}}" bindtap="ViewImage" data-url="{{item.url}}" wx:key>
+    <image src="{{item}}" mode="aspectFill"></image>
+  </swiper-item>
+</swiper>
+
+<view class="cu-bar bg-white">
+    <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">猫咪信息</text>
+    </view>
+</view>
+
+<view class="cu-card case" wx:for="{{catDetail}}" wx:key >
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+        <view class="content flex-sub">
+          <view class="text-grey text-lg">{{item.name}}</view>
+          <view class="text-gray text-df flex justify-between">
+            {{item.nickName}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="solid-bottom text-lg padding">
+        <text class="text-black text-bold">性别：</text>
+        <text class="text-black">{{item.gender==0?'女':'男'}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding">
+        <text class="text-black text-bold">年龄：</text>
+        <text class="text-black">{{item.age}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding" wx:if="{{item.study!=='喵星'}}">
+        <text class="text-black text-bold">是否绝育：</text>
+        <text class="text-black">{{item.sterilized==false?'否':'是'}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding">
+        <text class="text-black text-bold">花色：</text>
+        <text class="text-black">{{item.kind}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding" wx:if="{{item.study==='在读'}}">
+        <text class="text-black text-bold">活动范围：</text>
+        <text class="text-black">{{item.location}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding">
+        <text class="text-black text-bold">性格：</text>
+        <text class="text-black">{{item.character}}</text>
+    </view>
+    <view class="solid-bottom text-lg padding">
+        <text class="text-black text-bold">状态：</text>
+        <text class="text-black">{{item.state}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white">
+    <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">交友情况</text>
+    </view>
+</view>
+
+<view class="cu-card case" wx:for="{{catDetail}}" wx:key >
+    <view class="cu-item shadow">
+        <view class="cu-list menu-avatar">
+            <view class="solid-bottom text-lg padding">
+                <text class="text-black">{{item.relationship}}</text>
+             </view>
+        </view>
+    </view>
+</view>
+
+<view class="cu-bar bg-white">
+    <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">猫生时刻</text>
+    </view>
+</view>
+
+<view class="cu-card case" wx:for="{{catDetail}}" wx:key >
+    <view class="cu-item shadow" wx:for="{{item.past}}" wx:key >
+        <view class="cu-list menu-avatar">
+            <view class="cu-timeline">
+                <view class="cu-time">{{item.date}}</view>
+                <view class="cu-item">
+                    <view class="content">{{item.event}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="cu-bar bg-white">
+    <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">故事分享</text>
+    </view>
+</view>
+
+<view class="cu-card case" wx:for="{{catDetail}}" wx:key >
+    <view class="cu-item shadow">
+        <view class="solid-bottom text-lg padding-tb padding-left">
+                <text class="text-black">一起来分享你和</text>
+                <text class="text-black"> {{item.name}} </text>
+                <text class="text-black">的故事吧！</text>
+        </view>
+        <view class="cu-list menu-avatar" wx:for="{{item.story}}" wx:key >
+            <view class="solid-bottom text-lg padding bg-green light margin-lr margin-tb-sm">
+                <text class="text-black">{{item}}</text>
+            </view>
+        </view>
+    </view>
+</view>

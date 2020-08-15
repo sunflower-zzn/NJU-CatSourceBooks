@@ -1,0 +1,9 @@
+<!--catcollaction/pages/about/sponsor/sponsor.wxml-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">赞赏支持</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-purple text-bold'>感谢老板的投喂！</view>
+  <view class='text-content'>
+    <view class="padding-bottom">南京大学宠物之家是南京大学唯一一个以动物为主体的公益类社团，别名南大流浪猫救助协会，至今已有八年历史。从一开始的民间组织，到现在百余人的社团，经历过许多坎坷，但初心始终不变。</view>
+    <image bindtap="ViewImage" src="https://zzn-wx-miniprogram.oss-cn-beijing.aliyuncs.com/cat_pics/sponsor.png"></image>
+  </view>
+</view>

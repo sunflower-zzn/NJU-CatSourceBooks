@@ -1,0 +1,126 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">猫咪学籍注册</view>
+</cu-custom> 
+<form bindsubmit="infoSubmit">
+	<view class="cu-form-group margin-top">
+		<view class="title">名字</view>
+		<input name="name" placeholder="请输入猫咪名"></input>
+	</view>
+   <view class="cu-bar bg-white">
+		<view class="action">
+			头像上传（图片长宽比为1：1）
+		</view>
+		<view class="action">
+			{{iconList.length}}/1
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{iconList}}" wx:key="{{index}}" bindtap="ViewImage0" data-url="{{iconList[index]}}">
+				<image src='{{iconList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg0" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage0" wx:if="{{iconList.length<1}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+	<view class="cu-form-group margin-top">
+		<view class="title">学籍</view>
+		<picker bindchange="PickerChange3" value="{{index3}}" range="{{picker3}}">
+			<view class="picker3">
+				{{index3?picker3[index3]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">昵称</view>
+		<input name="nickName" placeholder="请输入猫咪昵称，例如：南大第一美猫"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">性别</view>
+		<picker bindchange="PickerChange0" value="{{index0}}" range="{{picker0}}">
+			<view class="picker0">
+				{{index0?picker0[index0]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">年龄</view>
+		<input name="age" placeholder="请输入猫咪出生时间，例：2016年初"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">是否绝育</view>
+		<picker bindchange="PickerChange1" value="{{index1}}" range="{{picker1}}">
+			<view class="picker1">
+				{{index1?picker1[index1]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">品种</view>
+		<picker bindchange="PickerChange2" value="{{index2}}" range="{{picker2}}">
+			<view class="picker2">
+				{{index2?picker2[index2]:'请选择'}}
+			</view>
+		</picker>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">活动范围</view>
+		<input name="location" placeholder="请输入猫咪主要活动区域"></input>
+		<text class="cuIcon-locationfill text-orange"></text>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">性格</view>
+		<input name="characteristic" placeholder="请输入猫咪性格"></input>
+	</view>
+  <view class="cu-form-group">
+		<view class="title">状态</view>
+		<input name="state" placeholder="请输入猫咪状态，例如：身体健康"></input>
+	</view>
+  <view class="cu-form-group align-start">
+		<view class="title">交友情况</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaRelationshipInput" name="relationship" placeholder="请输入猫咪交友情况"></textarea>
+	</view>
+	<view class="cu-form-group margin-top">
+		<view class="title">猫生时刻时间</view>
+		<input name="date" placeholder="请输入时间，格式为xx.xx"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">猫生时刻故事</view>
+		<input name="event" placeholder="请输入小故事,例：吃罐头！"></input>
+	</view>
+  <view class="cu-form-group align-start margin-top">
+		<view class="title">故事分享</view>
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaStoryInput" name="story" placeholder="快与大家分享关于ta的过去吧！"></textarea>
+	</view>
+  <view class="cu-bar bg-white margin-top">
+		<view class="action">
+			图片上传(图片长宽比约为16：9)
+		</view>
+		<view class="action">
+			{{imgList.length}}/9
+		</view>
+	</view>
+	<view class="cu-form-group">
+		<view class="grid col-3 grid-square flex-sub">
+			<view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage1" data-url="{{imgList[index]}}">
+				<image src='{{imgList[index]}}' mode='aspectFill'></image>
+				<view class="cu-tag bg-red" catchtap="DelImg1" data-index="{{index}}">
+					<text class="cuIcon-close"></text>
+				</view>
+			</view>
+			<view class="solids" bindtap="ChooseImage1" wx:if="{{imgList.length<9}}">
+				<text class="cuIcon-cameraadd"></text>
+			</view>
+		</view>
+	</view>
+
+  <view class="cu-bar btn-group">
+    <button class="cu-btn bg-green shadow-blur round lg" type="primary" form-type="submit" >上传</button>
+  </view>
+
+</form>

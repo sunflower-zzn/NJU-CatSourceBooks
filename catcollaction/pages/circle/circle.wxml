@@ -1,0 +1,40 @@
+<scroll-view scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}">
+<!-- 插入一张类似于朋友圈顶部的图片 -->
+<view class="UCenter-bg">
+    <image src="/images/share.png" class="png" mode="widthFix" bindtap="fresh"></image>
+</view>
+
+
+  <view class="cu-card dynamic {{isCard?'no-card':''}}"  wx:for="{{circle}}"  wx:key="id" >
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar" >
+      <view class="cu-item" >
+      <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+        <view class="content flex-sub">
+          <view>{{item.author}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{item.date}}
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="text-content">
+      {{item.content}}
+    </view>
+    
+    <view class='photo-view'>
+          <view class='photo'  style='width:31%;height:{{photoWidth}}px' wx:for="{{item.imgUrl}}" wx:key="id">
+            <image bindtap='LookPhoto' data-imgUrl='{{item}}' src='{{item}}' style='height:{{photoWidth}}px' lazy-load="true" mode="aspectFill"></image>
+          </view>
+        </view>
+    <view class="text-gray text-sm text-right padding" data-id="{{item.id}}" bindtap="TouchZanUser">
+      <text class="cuIcon-appreciatefill margin-lr-xs" ></text> {{item.like}}
+    </view>
+    
+  </view>
+</view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
+<view class="add_btn">
+  <button bindtap="upLoad" class='btn' >+</button>
+</view>

@@ -1,0 +1,28 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/index/index",
+        "pages/cathome/cathome",
+        "pages/catdetail/catdetail",
+        "pages/circle/circle",
+        "pages/catkind/home",
+        "pages/about/about/about",
+        "pages/about/log/log",
+        "pages/about/home/home",
+        "pages/about/sponsor/sponsor",
+        "pages/about/catDetailUpload/catDetailUpload",
+        "pages/about/admin/admin",
+        "pages/about/catpyqUpload/catpyqUpload"
+        
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#39b54a",
+        "navigationBarTitleText": "Color UI",
+        "navigationStyle": "custom",
+        "navigationBarTextStyle": "white"
+    },
+    "usingComponents": {
+        "cu-custom": "/colorui/components/cu-custom"
+    },
+    "sitemapLocation": "sitemap.json"
+}

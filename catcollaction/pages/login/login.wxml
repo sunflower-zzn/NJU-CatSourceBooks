@@ -1,0 +1,31 @@
+<!--catcollaction/pages/login/login.wxml-->
+<scroll-view scroll-y class="scrollPage bg-white">
+  <view class="flex align-center justify-center margin" style="padding-top: 100rpx">
+    <image src="/images/share.png" mode="widthFix"></image>
+  </view>
+
+  <view class="padding-bottom text-center">
+    <text class="text-lg">By: NJU18SE</text>
+  </view>
+
+
+  <view class="box bg-white text-center radius">
+    <button class = "cu-btn lines-red round lg shadow" style="margin-top: 200rpx" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 进入南大猫咪图鉴！ </button>
+
+    <block wx:else>
+      <image bindtap="bindViewTap" class="cu-avatar xl round" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="padding text-black">{{userInfo.nickName}}</text>
+      <view class="text-black text-lg padding">
+        <text wx:if= "{{hasUserInfo && canIUse}}">{{notice}}</text>
+      </view>
+      <view class="bg-white radius shadow-lg">
+        <image src="/images/loading-white.gif" mode="aspectFit" class="gif-white response" style="height:300rpx"></image>
+      </view>
+    </block>
+  </view>
+  
+
+  
+
+
+</scroll-view>

@@ -1,0 +1,84 @@
+<!--catcollaction/pages/cathome/cathome.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <swiper class="card-swiper square-dot margin-top-xl margin-bottom-xs" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper"  indicator-color="#8799a3" indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" bindtap="ViewImage" data-url="{{swiperList[index]}}" wx:key="id" class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item">
+        <image src="{{item.url}}" mode="aspectFill"  wx:if="{{item.type=='image'}} "></image>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <scroll-view scroll-x class="bg-white nav">
+    <view class="flex text-center">
+      <view class="cu-item flex-sub {{0==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="0">
+        <text class="cuIcon-camerafill"></text> 在读
+      </view>
+      <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="1">
+        <text class="cuIcon-upstagefill"></text> 毕业
+      </view>
+      <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="2">
+        <text class="cuIcon-clothesfill"></text> 辍学
+      </view>
+      <view class="cu-item flex-sub {{3==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="3">
+        <text class="cuIcon-clothesfill"></text> 喵星
+      </view>
+    </view>
+  </scroll-view>
+
+  <view wx:if="{{TabCur==0}}" class='cu-card case padding'>
+      <navigator open-type="navigate" hover-clpngass='none' url="/pages/catdetail/catdetail?id={{item.id}}" wx:for="{{catData}}" wx:key="id">
+        <view class="cu-list menu-avatar" wx:if="{{item.study==='在读'}}">
+          <view class="cu-item padding-sm">
+            <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+            <view class="content flex-sub">
+              <view class="text-orange text-lg">{{item.name}}</view>
+              <view class="text-gray text-df flex justify-between">{{item.nickName}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+  </view>
+
+  <view wx:if="{{TabCur==1}}" class='cu-card case padding'>
+      <navigator open-type="navigate" hover-clpngass='none' url="/pages/catdetail/catdetail?id={{item.id}}" wx:for="{{catData}}" wx:key="id">
+        <view class="cu-list menu-avatar" wx:if="{{item.study==='毕业'}}">
+          <view class="cu-item padding-sm">
+            <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+            <view class="content flex-sub">
+              <view class="text-orange text-lg">{{item.name}}</view>
+              <view class="text-gray text-df flex justify-between">{{item.nickName}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+  </view>
+
+  <view wx:if="{{TabCur==2}}" class='cu-card case padding'>
+      <navigator open-type="navigate" hover-clpngass='none' url="/pages/catdetail/catdetail?id={{item.id}}" wx:for="{{catData}}" wx:key="id">
+        <view class="cu-list menu-avatar" wx:if="{{item.study==='辍学'}}">
+          <view class="cu-item padding-sm">
+            <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+            <view class="content flex-sub">
+              <view class="text-orange text-lg">{{item.name}}</view>
+              <view class="text-gray text-df flex justify-between">{{item.nickName}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+  </view>
+
+  <view wx:if="{{TabCur==3}}" class='cu-card case padding'>
+      <navigator open-type="navigate" hover-clpngass='none' url="/pages/catdetail/catdetail?id={{item.id}}" wx:for="{{catData}}" wx:key="id">
+        <view class="cu-list menu-avatar" wx:if="{{item.study==='喵星'}}">
+          <view class="cu-item padding-sm">
+            <view class="cu-avatar round lg" style="background-image:url({{item.icon}});"></view>
+            <view class="content flex-sub">
+              <view class="text-orange text-lg">{{item.name}}</view>
+              <view class="text-gray text-df flex justify-between">{{item.nickName}}</view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
